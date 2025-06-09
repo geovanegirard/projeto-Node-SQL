@@ -13,6 +13,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use(statusRoute);
 app.use(usersRoute);
 
+// Configuração dos Handlers de Erro
+app.use(errorHandler);
+
 // Inicialização do servidor
 app.listen(3000, () => {
     console.log('Aplicação executando na porta 3000!');
